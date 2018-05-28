@@ -1,5 +1,5 @@
 
-####intro
+#### intro
 Установка и настройка пакета:
 
 Загрузка через йогурт
@@ -22,7 +22,7 @@
     # squid -k interrupt # bring squid to a stop
     # squid -k check # is it running?
 
-####Настройка
+#### Настройка
 Открываем порт 3128.
 
     firewall-cmd --add-port=3128/tcp
@@ -43,9 +43,14 @@
 
 *   `url_rewrite_extras "%>a %>rm %un"` # формат ввода с `stdin`
 *   `url_rewrite_children 3 startup=0 idle=1 concurrency=10` # вспомогательные процессы.
-*   `url_rewrite_program /etc/squid/squid-redirect.py` #место расположения вспомогательной программы
+*   `url_rewrite_program /etc/squid/squid-redirect.py` #место расположения вспомогательной программы.
 
+[Файл программы.](https://github.com/neandrey/ideco/blob/master/squid-redirect.py) 
+[JSON-файл.](https://github.com/neandrey/ideco/blob/master/dataweb.json)
+[squid-conf.](https://github.com/neandrey/ideco/blob/master/squid.conf)
 
+#### P.S. 
+Дальше разберусь с syslog-ом. Всю прошлую неделю работал смог сесть за задание только в выходные.
 
 
 
