@@ -47,8 +47,8 @@
 Для организации логов в syslog в python есть модуль syslog
 
         import syslog
-        
-[Syslog](http://wiki.squid-cache.org/Features/Redirectors) 
+
+[Syslog](https://docs.python.org/3.1/library/syslog.html) 
 
 
 
