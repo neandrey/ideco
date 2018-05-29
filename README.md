@@ -41,16 +41,23 @@
 
 Да для работы программы необходимо:
 
-*   `url_rewrite_extras "%>a %>rm %un"` # формат ввода с `stdin`
 *   `url_rewrite_children 3 startup=0 idle=1 concurrency=10` # вспомогательные процессы.
 *   `url_rewrite_program /etc/squid/squid-redirect.py` #место расположения вспомогательной программы.
+
+Для организации логов в syslog в python есть модуль syslog
+
+        import syslog
+        
+[Syslog](http://wiki.squid-cache.org/Features/Redirectors) 
+
+
 
 [Файл программы.](https://github.com/neandrey/ideco/blob/master/squid-redirect.py) 
 [JSON-файл.](https://github.com/neandrey/ideco/blob/master/dataweb.json)
 [squid-conf.](https://github.com/neandrey/ideco/blob/master/squid.conf)
 
 #### P.S. 
-Дальше разберусь с syslog-ом. Всю прошлую неделю работал смог сесть за задание только в выходные.
+
 
 
 
